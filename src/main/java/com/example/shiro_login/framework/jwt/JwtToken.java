@@ -1,0 +1,20 @@
+package com.example.shiro_login.framework.jwt;
+
+import org.apache.shiro.authc.AuthenticationToken;
+
+public class JwtToken implements AuthenticationToken {
+    String token;
+    public JwtToken(String token){
+        this.token = token;
+    }
+    @Override
+    public Object getPrincipal() {
+        return token;
+    }
+
+    @Override
+    public Object getCredentials() {
+        return token;
+    }
+}
+
